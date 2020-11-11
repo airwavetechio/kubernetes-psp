@@ -1,0 +1,40 @@
+kind: ClusterRoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: 'default:restricted'
+  selfLink: /apis/rbac.authorization.k8s.io/v1/clusterrolebindings/default%3Arestricted
+  uid: 7722d225-483c-45e7-aadf-7db718e41fed
+  resourceVersion: '304'
+  creationTimestamp: '2020-11-11T20:56:06Z'
+  labels:
+    addonmanager.kubernetes.io/mode: EnsureExists
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: >
+      {"apiVersion":"rbac.authorization.k8s.io/v1","kind":"ClusterRoleBinding","metadata":{"annotations":{},"labels":{"addonmanager.kubernetes.io/mode":"EnsureExists"},"name":"default:restricted"},"roleRef":{"apiGroup":"rbac.authorization.k8s.io","kind":"ClusterRole","name":"psp:restricted"},"subjects":[{"apiGroup":"rbac.authorization.k8s.io","kind":"Group","name":"system:authenticated"}]}
+  managedFields:
+    - manager: kubectl-client-side-apply
+      operation: Update
+      apiVersion: rbac.authorization.k8s.io/v1
+      time: '2020-11-11T20:56:06Z'
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:metadata':
+          'f:annotations':
+            .: {}
+            'f:kubectl.kubernetes.io/last-applied-configuration': {}
+          'f:labels':
+            .: {}
+            'f:addonmanager.kubernetes.io/mode': {}
+        'f:roleRef':
+          'f:apiGroup': {}
+          'f:kind': {}
+          'f:name': {}
+        'f:subjects': {}
+subjects:
+  - kind: Group
+    apiGroup: rbac.authorization.k8s.io
+    name: 'system:authenticated'
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: 'psp:restricted'
