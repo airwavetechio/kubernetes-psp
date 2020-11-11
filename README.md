@@ -29,3 +29,8 @@ kubectl apply -f role.yml
 kubectl --as=system:serviceaccount:default:fakeuser apply -f test-deploy.yml
 ```
 
+## Restoring your minikube restricted policy
+```
+kubectl apply -f default-psp/restricted-rolebinding.yml
+```
+
