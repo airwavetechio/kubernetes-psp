@@ -3,35 +3,8 @@ apiVersion: rbac.authorization.k8s.io/v1
 metadata:
   name: 'default:privileged'
   namespace: kube-system
-  selfLink: >-
-    /apis/rbac.authorization.k8s.io/v1/namespaces/kube-system/rolebindings/default:privileged
-  uid: c1b4ba71-a50a-4ee6-8ee0-14ca1a7cb1ff
-  resourceVersion: '305'
-  creationTimestamp: '2020-11-11T20:56:06Z'
   labels:
     addonmanager.kubernetes.io/mode: EnsureExists
-  annotations:
-    kubectl.kubernetes.io/last-applied-configuration: >
-      {"apiVersion":"rbac.authorization.k8s.io/v1","kind":"RoleBinding","metadata":{"annotations":{},"labels":{"addonmanager.kubernetes.io/mode":"EnsureExists"},"name":"default:privileged","namespace":"kube-system"},"roleRef":{"apiGroup":"rbac.authorization.k8s.io","kind":"ClusterRole","name":"psp:privileged"},"subjects":[{"apiGroup":"rbac.authorization.k8s.io","kind":"Group","name":"system:masters"},{"apiGroup":"rbac.authorization.k8s.io","kind":"Group","name":"system:nodes"},{"apiGroup":"rbac.authorization.k8s.io","kind":"Group","name":"system:serviceaccounts:kube-system"}]}
-  managedFields:
-    - manager: kubectl-client-side-apply
-      operation: Update
-      apiVersion: rbac.authorization.k8s.io/v1
-      time: '2020-11-11T20:56:06Z'
-      fieldsType: FieldsV1
-      fieldsV1:
-        'f:metadata':
-          'f:annotations':
-            .: {}
-            'f:kubectl.kubernetes.io/last-applied-configuration': {}
-          'f:labels':
-            .: {}
-            'f:addonmanager.kubernetes.io/mode': {}
-        'f:roleRef':
-          'f:apiGroup': {}
-          'f:kind': {}
-          'f:name': {}
-        'f:subjects': {}
 subjects:
   - kind: Group
     apiGroup: rbac.authorization.k8s.io

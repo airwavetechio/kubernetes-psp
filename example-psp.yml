@@ -10,8 +10,7 @@ spec:
   supplementalGroups:
     rule: RunAsAny
   runAsUser:
-    #rule: MustRunAsNonRoot
-    rule: RunAsAny
+    rule: MustRunAsNonRoot
   fsGroup:
     rule: RunAsAny
   volumes:

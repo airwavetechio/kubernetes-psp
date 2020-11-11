@@ -24,9 +24,13 @@ kubectl create serviceaccount fakeuser
 ```
 kubectl apply -f role.yml
 ```
-* Test the deploy (it should fail and give an explanation of why)
+* Test the deploy 
 ```
 kubectl --as=system:serviceaccount:default:fakeuser apply -f test-deploy.yml
+```
+* See what happened
+```
+kubectl describe pod pod01
 ```
 
 ## Restoring your minikube restricted policy
